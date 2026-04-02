@@ -1,22 +1,33 @@
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMS School Hub</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background: #f0f2f5; }
+        body { font-family: sans-serif; margin: 0; background: #f0f2f5; padding-bottom: 50px; }
         .header { background: #004a99; color: white; padding: 30px; text-align: center; border-radius: 0 0 20px 20px; }
         .container { padding: 20px; }
         .btn { display: block; background: white; padding: 20px; margin-bottom: 15px; border-radius: 12px; text-decoration: none; color: #333; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 6px solid #004a99; text-align: center; }
+        .section { display: none; background: white; padding: 20px; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        /* This magic trick shows the section when the button is clicked */
+        .section:target { display: block; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>PMS Portal</h1><p>Digital School Hub</p></div>
+    <div class="header"><h1>PMS NAWAGABR Portal</h1><p>Digital School Hub</p></div>
+    
     <div class="container">
-        <a href="#" class="btn">📚 Subject Notes</a>
-        <a href="#" class="btn">📝 Practice Exams</a>
-        <a href="#" class="btn">📞 Contact Teacher</a>
+        <a href="#notes" class="btn">📚 View Subject Notes</a>
+        <a href="tel:9596008958" class="btn">📞 Call School Office</a>
+        
+        <div id="notes" class="section">
+            <h2 style="color:#004a99">NCERT Study Notes</h2>
+            <hr>
+            <p><strong>English:</strong> Chapter 1 Summary available.</p>
+            <p><strong>Science:</strong> Biology Diagram Guide.</p>
+            <a href="#" style="color:red; font-weight:bold;">Back to Top</a>
+        </div>
     </div>
 </body>
 </html>
